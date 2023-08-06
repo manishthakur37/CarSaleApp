@@ -14,6 +14,6 @@ class Car(Document):
     
         current_date = frappe.utils.now_datetime().date()
         selected_date = frappe.utils.getdate(doc.year)
-
+        # date validated 
         if selected_date > current_date:
             frappe.throw("Invalid year. The year cannot be in the future.")
