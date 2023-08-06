@@ -1,0 +1,154 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-08-05 20:56:37.427102",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "make",
+  "model",
+  "year",
+  "vin",
+  "column_break_0rb1p",
+  "price",
+  "color",
+  "mileage",
+  "condition",
+  "column_break_gaxci",
+  "transmission",
+  "fuel_type",
+  "engine_displacement",
+  "features",
+  "column_break_uuptg",
+  "image",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "make",
+   "fieldtype": "Link",
+   "label": "Make",
+   "options": "Car Make",
+   "reqd": 1
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "fieldname": "year",
+   "fieldtype": "Date",
+   "label": "Year"
+  },
+  {
+   "fieldname": "vin",
+   "fieldtype": "Data",
+   "label": "VIN"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "label": "Price"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Data",
+   "label": "Color"
+  },
+  {
+   "fieldname": "mileage",
+   "fieldtype": "Float",
+   "label": "Mileage"
+  },
+  {
+   "fieldname": "condition",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Condition",
+   "options": "New\nUsed\nCertified Pre-owned"
+  },
+  {
+   "fieldname": "transmission",
+   "fieldtype": "Select",
+   "label": "Transmission",
+   "options": "Automatic\nManual"
+  },
+  {
+   "fieldname": "fuel_type",
+   "fieldtype": "Select",
+   "label": "Fuel Type",
+   "options": "Petrol\nDiesel\nElectric\nCNG"
+  },
+  {
+   "fieldname": "engine_displacement",
+   "fieldtype": "Float",
+   "label": "Engine Displacement"
+  },
+  {
+   "default": "0",
+   "fieldname": "features",
+   "fieldtype": "Table MultiSelect",
+   "label": "Features",
+   "options": "Car Feature Detail"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach",
+   "label": "Image",
+   "options": "Image"
+  },
+  {
+   "fieldname": "column_break_0rb1p",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_gaxci",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_uuptg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "In Stock",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Sold\nIn Stock"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "max_attachments": 10,
+ "modified": "2023-08-06 14:14:22.677456",
+ "modified_by": "Administrator",
+ "module": "carsale",
+ "name": "Car",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "route": "test",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
