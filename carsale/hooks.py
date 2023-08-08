@@ -7,12 +7,21 @@ app_description = " your car sale"
 app_email = "mk885770@gmail.com"
 app_license = "mkt"
 
+app_logo_url = "/assets/carsale/images/logo.png"
+
+website_context = {
+    "favicon": "/assets/carsale/images/logo.png",
+    "splash_image": "/assets/carsale/images/logo.png",
+    "banner_image":"/assets/carsale/images/logo.png",
+    
+}
+
 # Includes in <head>
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/carsale/css/carsale.css"
-# app_include_js = "/assets/carsale/js/carsale.js"
+app_include_css = "/assets/carsale/css/carsale.css"
+app_include_js = "/assets/carsale/js/carsale.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/carsale/css/carsale.css"

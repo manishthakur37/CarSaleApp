@@ -27,13 +27,6 @@
  ],
  "fields": [
   {
-   "fieldname": "make",
-   "fieldtype": "Link",
-   "label": "Make",
-   "options": "Car Make",
-   "reqd": 1
-  },
-  {
    "fieldname": "model",
    "fieldtype": "Data",
    "label": "Model"
@@ -97,9 +90,8 @@
   },
   {
    "fieldname": "image",
-   "fieldtype": "Attach",
-   "label": "Image",
-   "options": "Image"
+   "fieldtype": "Attach Image",
+   "label": "Image"
   },
   {
    "fieldname": "column_break_0rb1p",
@@ -121,12 +113,19 @@
    "in_standard_filter": 1,
    "label": "Status",
    "options": "Sold\nIn Stock"
+  },
+  {
+   "fieldname": "make",
+   "fieldtype": "Link",
+   "label": "Make",
+   "options": "Car Make",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
  "max_attachments": 10,
- "modified": "2023-08-06 14:14:22.677456",
+ "modified": "2023-08-08 12:35:31.552741",
  "modified_by": "Administrator",
  "module": "carsale",
  "name": "Car",

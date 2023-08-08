@@ -7,19 +7,13 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "car",
+  "make",
   "customer",
   "sale_date",
   "sale_price",
   "amended_from"
  ],
  "fields": [
-  {
-   "fieldname": "car",
-   "fieldtype": "Link",
-   "label": "Car",
-   "options": "Car"
-  },
   {
    "fieldname": "customer",
    "fieldtype": "Link",
@@ -44,12 +38,18 @@
    "options": "Car Sale",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "make",
+   "fieldtype": "Link",
+   "label": "Car",
+   "options": "Car"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-08-06 12:37:29.013952",
+ "modified": "2023-08-07 13:47:33.081777",
  "modified_by": "Administrator",
  "module": "carsale",
  "name": "Car Sale",
