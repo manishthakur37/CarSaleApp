@@ -20,8 +20,10 @@ class Car(Document):
                 item = frappe.get_doc({
                     "doctype": "Item",
                     "item_code": item_code,
-                    "item_name": self.name,  # Set item name to be the same as document name
-                    "item_group": "Products"
+                    "item_name": self.name,
+                    # Set item name to be the same as document name
+                    "item_group": "Products",
+                    "valuation_rate": self.owner_price_demand
                 })
                 item.insert(ignore_permissions=True)
 
@@ -31,7 +33,6 @@ class Car(Document):
         # Validate the year
         if selected_date > current_date:
             frappe.throw("Invalid year. The year cannot be in the future.")
-
 
 
                 

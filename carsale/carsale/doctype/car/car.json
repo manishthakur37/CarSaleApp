@@ -23,7 +23,8 @@
   "features",
   "column_break_uuptg",
   "image",
-  "status"
+  "status",
+  "owner_price_demand"
  ],
  "fields": [
   {
@@ -120,12 +121,22 @@
    "label": "Make",
    "options": "Car Make",
    "reqd": 1
+  },
+  {
+   "fieldname": "owner_price_demand",
+   "fieldtype": "Currency",
+   "label": "Owner Price Demand"
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
+ "links": [
+  {
+   "link_doctype": "Item",
+   "link_fieldname": "name"
+  }
+ ],
  "max_attachments": 10,
- "modified": "2023-08-08 12:35:31.552741",
+ "modified": "2023-08-08 21:19:57.368758",
  "modified_by": "Administrator",
  "module": "carsale",
  "name": "Car",
