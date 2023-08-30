@@ -24,7 +24,8 @@
   "column_break_uuptg",
   "image",
   "status",
-  "owner_price_demand"
+  "owner_price_demand",
+  "km_run"
  ],
  "fields": [
   {
@@ -126,8 +127,14 @@
    "fieldname": "owner_price_demand",
    "fieldtype": "Currency",
    "label": "Owner Price Demand"
+  },
+  {
+   "fieldname": "km_run",
+   "fieldtype": "Data",
+   "label": "KM Run"
   }
  ],
+ "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [
   {
@@ -136,7 +143,7 @@
   }
  ],
  "max_attachments": 10,
- "modified": "2023-08-08 21:19:57.368758",
+ "modified": "2023-08-17 18:28:41.456081",
  "modified_by": "Administrator",
  "module": "carsale",
  "name": "Car",

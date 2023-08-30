@@ -24,8 +24,8 @@ app_include_css = "/assets/carsale/css/carsale.css"
 app_include_js = "/assets/carsale/js/carsale.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/carsale/css/carsale.css"
-# web_include_js = "/assets/carsale/js/carsale.js"
+web_include_css = "/assets/carsale/css/style.css"
+web_include_js = "/assets/carsale/js/carsale.js"
 
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "carsale/public/scss/website"
@@ -38,7 +38,9 @@ app_include_js = "/assets/carsale/js/carsale.js"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+    "Sales Invoice" : "public/js/sales_invoice.js"
+    }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -117,6 +119,10 @@ app_include_js = "/assets/carsale/js/carsale.js"
 #		"on_cancel": "method",
 #		"on_trash": "method"
 #	}
+# }
+
+# doc_events = {
+#     "after_save": ""
 # }
 
 # Scheduled Tasks
@@ -208,3 +214,46 @@ app_include_js = "/assets/carsale/js/carsale.js"
 # auth_hooks = [
 #	"carsale.auth.validate"
 # ]
+
+
+# custom_app/hooks.py
+
+# custom_app/hooks.py
+
+
+
+scheduler_events = {
+	"cron": {
+		"42 13 * * *": [
+			        "carsale.python_script.sales_order_overdue.sale_order_overdue_scheduled"
+
+		]
+	}
+}
+
+fixtures = [
+    {
+        "doctype": "Note",
+    }
+]
+
+
+
+doc_events = {
+    "Car": {
+        "on_trash": "carsale.python_script.car.delete_car_entry"
+    },
+    "User":{
+        "after_save": "carsale.python_script.user.after_insert"
+    }
+}
+
+# # Permissions
+# permission_query_conditions = {
+#     "Sales Invoice": "carsale.python_script.sales_invoice_extension.process_online_payment"
+# }
+
+
+# hooks.py
+
+after_signup = "carsale.python_script.auth.after_signup"

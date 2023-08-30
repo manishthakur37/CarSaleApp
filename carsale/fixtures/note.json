@@ -1,0 +1,22 @@
+[
+ {
+  "content": "<div class=\"ql-editor read-mode\"><p><strong>Welcome back!</strong></p><p><br></p><p>We're glad to see you again. Thank you for choosing<strong> Mr. Ustadd</strong>. You're now logged in and ready to explore.</p><p><br></p><p>If you need any assistance, our support team is here to help. Feel free to navigate through the various features and functionalities of our application. Your feedback is invaluable in helping us improve your experience.</p><p><br></p><p>Enjoy your time with us!</p><p><br></p></div>",
+  "docstatus": 0,
+  "doctype": "Note",
+  "expire_notification_on": "2023-08-26",
+  "modified": "2023-08-19 13:23:01.541712",
+  "name": "Welcome Back",
+  "notify_on_every_login": 0,
+  "notify_on_login": 1,
+  "public": 1,
+  "seen_by": [
+   {
+    "parent": "Welcome Back",
+    "parentfield": "seen_by",
+    "parenttype": "Note",
+    "user": "Administrator"
+   }
+  ],
+  "title": "Welcome Back"
+ }
+]

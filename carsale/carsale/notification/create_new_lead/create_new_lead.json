@@ -1,0 +1,34 @@
+{
+ "attach_print": 0,
+ "channel": "Email",
+ "condition": "doc.status == \"Lead\"",
+ "creation": "2023-08-19 19:00:48.272023",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Lead",
+ "enabled": 1,
+ "event": "New",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Add your message here",
+ "modified": "2023-08-19 19:32:30.787253",
+ "modified_by": "Administrator",
+ "module": "carsale",
+ "name": "create new lead",
+ "owner": "Administrator",
+ "property_value": "Lead",
+ "recipients": [
+  {
+   "condition": "doc.status == \"Lead\"",
+   "receiver_by_document_field": "owner",
+   "receiver_by_role": "Administrator"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 0,
+ "sender": "manish kumar",
+ "sender_email": "manish.kumar@nestorbird.com",
+ "set_property_after_alert": "status",
+ "subject": "create new lead"
+}

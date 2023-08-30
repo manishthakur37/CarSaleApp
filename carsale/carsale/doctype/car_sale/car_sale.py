@@ -35,7 +35,29 @@ class CarSale(Document):
             "item_code": item_code,
             "item_name": item_name,
             "qty": 1,
-            "rate": self.sale_price
+            "rate": self.sale_price,
         })
         sales_order.insert(ignore_permissions=True)
         sales_order.submit()
+
+        self.create_sales_invoice(sales_order)
+
+    def create_sales_invoice(self, sales_order):
+        sales_invoice = frappe.new_doc("Sales Invoice")
+        sales_invoice.customer = self.customer
+        sales_invoice.due_date = self.sale_date  
+        for item in sales_order.items:
+            sales_invoice.append("items", {
+                "item_code": item.item_code,
+                "item_name": item.item_name,
+                "qty": item.qty,
+                "rate": item.rate,
+                "parent": item.parent,
+                "parenttype": item.parenttype,
+                "parentfield": item.parentfield,
+                "so_detail": item.name,
+                "sales_order": sales_order.name  
+            })
+
+        sales_invoice.insert(ignore_permissions=True)
+        sales_invoice.submit()
