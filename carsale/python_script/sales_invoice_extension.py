@@ -54,6 +54,7 @@ def create_payment_entry(docname, amount):
 
         # Insert the Payment Entry document
         payment_entry.insert()
+        payment_entry.submit()
 
         # Update the Sales Invoice status
         sales_invoice.set_status(update=True)

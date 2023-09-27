@@ -3,6 +3,11 @@ from frappe.model.document import Document
 from frappe.model.naming import make_autoname
 
 class Car(Document):
+    def before_save(self):
+        if self.model:
+            self.car_full_name = self.make + " " + self.model
+        else:
+            self.car_full_name = self.make
     def validate(self):
         car_make = self.make
 

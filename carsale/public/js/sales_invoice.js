@@ -25,7 +25,7 @@ frappe.ui.form.on('Sales Invoice', {
                             // Display a confirmation prompt with the payment amount
                             if (confirm(paymentPrompt)) {
                                 // Open the payment link in a new tab
-                                window.open(payment_link, '_blank');
+                                window.open(payment_link, '₹${paymentAmount}');
 
                                 // Create a Payment Entry after successful payment
                                 frappe.call({
@@ -36,6 +36,12 @@ frappe.ui.form.on('Sales Invoice', {
                                     },
                                     callback: function(response) {
                                         // Handle the response as needed
+                                        if (response.message && response.message.success) {
+                                            // Update the Sales Invoice status to "Paid"
+                                            frappe.model.set_value(frm.doctype, frm.docname, 'status', 'Paid');
+                                            frm.refresh_field('status');
+                                            frappe.msgprint(__('Sales Invoice status updated to "Paid".'));
+                                        }
                                     }
                                 });
                             }

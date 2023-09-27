@@ -9,6 +9,7 @@
  "field_order": [
   "make",
   "model",
+  "car_full_name",
   "year",
   "vin",
   "column_break_0rb1p",
@@ -132,6 +133,11 @@
    "fieldname": "km_run",
    "fieldtype": "Data",
    "label": "KM Run"
+  },
+  {
+   "fieldname": "car_full_name",
+   "fieldtype": "Read Only",
+   "label": "Car Full Name"
   }
  ],
  "image_field": "image",
@@ -143,7 +149,7 @@
   }
  ],
  "max_attachments": 10,
- "modified": "2023-08-17 18:28:41.456081",
+ "modified": "2023-08-30 10:41:47.174164",
  "modified_by": "Administrator",
  "module": "carsale",
  "name": "Car",

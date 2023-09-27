@@ -39,7 +39,8 @@ web_include_js = "/assets/carsale/js/carsale.js"
 
 # include js in doctype views
 doctype_js = {
-    "Sales Invoice" : "public/js/sales_invoice.js"
+    "Sales Invoice" : "public/js/sales_invoice.js",
+    "Item" : "public/js/item.js"
     }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -257,3 +258,12 @@ doc_events = {
 # hooks.py
 
 after_signup = "carsale.python_script.auth.after_signup"
+
+# website_route_rules = [
+#     # ...
+#     {
+#         "from_route": "/google-login",
+#         "to_route": "google_oauth",
+#     },
+#     # ...
+# ]

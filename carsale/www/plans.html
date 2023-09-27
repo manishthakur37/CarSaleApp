@@ -1,4 +1,7 @@
 {% extends 'templates/web.html' %} {% block content %}
+<!-- Include this button in your HTML template -->
+<a href="/google-login" class="btn btn-google">Login with Google</a>
+
 <div class="con-items">
     {% for plan in plans %}
     <div class="item {% if loop.index == 2 %}color{% endif %}">
